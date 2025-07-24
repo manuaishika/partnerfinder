@@ -1,6 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Nunito, Poppins, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
+});
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "700"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +45,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`
+          ${inter.variable} 
+          ${nunito.variable} 
+          ${poppins.variable} 
+          ${geistSans.variable} 
+          ${geistMono.variable} 
+          antialiased
+        `}
+        style={{ fontFamily: 'var(--font-inter), Arial, Helvetica, sans-serif' }}
       >
         {children}
       </body>

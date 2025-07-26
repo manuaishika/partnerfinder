@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 const navLinks = [
-  { name: "Home", href: "/" },
   { name: "About", href: "#" },
   { name: "Features", href: "#" },
   { name: "Contact", href: "#" },
@@ -92,16 +91,10 @@ export default function Home() {
 
       {/* Main Content */}
       <main className="relative z-10 flex flex-col items-center flex-1 px-4 text-center justify-center pt-8 pb-20">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#eaf3ec] text-[#254d32] font-medium mb-6 shadow-sm text-base">
-          <svg className="w-5 h-5 text-[#4e9a6e]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 17.75l-6.16 3.73 1.64-7.03L2 9.24l7.19-.61L12 2.5l2.81 6.13 7.19.61-5.48 5.21 1.64 7.03z" /></svg>
-          Made by students, for students
-        </div>
         {/* Headline */}
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-2 text-[#254d32] leading-tight">
           Find your <span className="text-[#4e9a6e]">perfect match</span>
         </h1>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#254d32] mb-4 opacity-80">for any context</h2>
         <p className="text-lg sm:text-xl md:text-2xl text-[#254d32] mb-8 max-w-2xl font-light mx-auto opacity-80">
           Connect with roommates, teammates, study partners, and event companions.<br />
           <span className="font-semibold text-[#254d32]">Simple. Authentic. Effective.</span>
@@ -143,6 +136,33 @@ export default function Home() {
           ))}
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="relative z-10 w-full py-12 border-t border-[#254d32]/10 mt-auto">
+        <div className="max-w-6xl mx-auto px-12">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-[#254d32] mb-6 md:mb-0">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="bg-gradient-to-br from-[#4e9a6e] to-[#254d32] rounded-xl w-10 h-10 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.91z" />
+                  </svg>
+                </div>
+                <span className="text-xl font-extrabold tracking-tight">Partner<span className="text-[#7bbf8e]">+</span></span>
+              </div>
+              <div className="text-sm opacity-70">Made for college students, by college students.</div>
+            </div>
+            <div className="flex gap-8 text-sm">
+              <Link href="#" className="text-[#254d32] hover:text-[#37624e] transition-colors font-medium">About</Link>
+              <Link href="#" className="text-[#254d32] hover:text-[#37624e] transition-colors font-medium">Privacy</Link>
+              <Link href="#" className="text-[#254d32] hover:text-[#37624e] transition-colors font-medium">Contact</Link>
+            </div>
+          </div>
+          <div className="text-center text-[#254d32] opacity-70 text-sm mt-8 pt-8 border-t border-[#254d32]/10">
+            © 2024 Partner+. All rights reserved.
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

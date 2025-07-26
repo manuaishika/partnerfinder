@@ -135,6 +135,24 @@ export default function Home() {
             </Link>
           ))}
         </div>
+
+        {/* Forums Actions */}
+        <div className="flex flex-col md:flex-row gap-8 w-full max-w-4xl mx-auto mb-20 justify-center items-center">
+          <Link href="/forums" className="flex-1">
+            <div className="bg-gradient-to-br from-[#eaf3ec] to-[#f6faf7] rounded-2xl p-8 flex flex-col items-center shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 cursor-pointer border border-[#eaf3ec]">
+              <svg className="w-10 h-10 mb-3 text-[#254d32]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2h2" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 3h-6a2 2 0 00-2 2v3a2 2 0 002 2h6a2 2 0 002-2V5a2 2 0 00-2-2z" /></svg>
+              <div className="text-lg font-bold text-[#254d32] mb-1">Browse Forums</div>
+              <div className="text-[#254d32] text-base text-center opacity-80">See what others are talking about and join the conversation.</div>
+            </div>
+          </Link>
+          <Link href="/forums/create" className="flex-1">
+            <div className="bg-gradient-to-br from-[#eaf3ec] to-[#f6faf7] rounded-2xl p-8 flex flex-col items-center shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 cursor-pointer border border-[#eaf3ec]">
+              <svg className="w-10 h-10 mb-3 text-[#254d32]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" /></svg>
+              <div className="text-lg font-bold text-[#254d32] mb-1">Create Your Own Forum</div>
+              <div className="text-[#254d32] text-base text-center opacity-80">Start a new discussion space for your interests or community.</div>
+            </div>
+          </Link>
+        </div>
       </main>
 
       {/* Footer */}

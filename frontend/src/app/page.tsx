@@ -1,11 +1,4 @@
 import Link from "next/link";
-import { SignInButton, SignUpButton, UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
-
-const navLinks = [
-  { name: "About", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Contact", href: "#" },
-];
 
 const features = [
   {
@@ -65,42 +58,7 @@ export default function Home() {
       <div className="absolute top-[40%] left-[-120px] w-[200px] h-[200px] bg-[#eaf3ec] bg-opacity-60 rounded-2xl blur-2xl z-0" />
       <div className="absolute bottom-[20%] right-[-120px] w-[180px] h-[180px] bg-[#eaf3ec] bg-opacity-60 rounded-2xl blur-2xl z-0" />
 
-      {/* Header */}
-      <header className="relative z-10 w-full flex items-center justify-between px-12 py-6 bg-transparent">
-        <div className="flex items-center gap-3">
-          <div className="bg-gradient-to-br from-[#4e9a6e] to-[#254d32] rounded-xl w-12 h-12 flex items-center justify-center">
-            <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.91z" />
-            </svg>
-          </div>
-          <span className="text-2xl font-extrabold text-[#254d32] tracking-tight">Partner<span className="text-[#7bbf8e]">+</span></span>
-        </div>
-        <nav className="hidden md:flex gap-10 text-lg font-medium text-[#254d32]">
-          {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="hover:text-[#37624e] transition-colors">{link.name}</Link>
-          ))}
-        </nav>
-        <div className="flex gap-3">
-          <SignedOut>
-            <SignInButton mode="modal">
-              <button className="px-5 py-2 rounded-lg font-semibold text-[#254d32] border border-[#254d32] bg-white bg-opacity-80 hover:bg-[#eaf3ec] transition">Login</button>
-            </SignInButton>
-            <SignUpButton mode="modal">
-              <button className="px-5 py-2 rounded-lg font-semibold text-white bg-gradient-to-br from-[#4e9a6e] to-[#254d32] shadow hover:from-[#37624e] hover:to-[#254d32] transition">Sign Up</button>
-            </SignUpButton>
-          </SignedOut>
-          <SignedIn>
-            <UserButton 
-              appearance={{
-                elements: {
-                  userButtonBox: "w-10 h-10",
-                  userButtonTrigger: "rounded-lg",
-                }
-              }}
-            />
-          </SignedIn>
-        </div>
-      </header>
+
 
       {/* Main Content */}
       <main className="relative z-10 flex flex-col items-center flex-1 px-4 text-center justify-center pt-8 pb-20">

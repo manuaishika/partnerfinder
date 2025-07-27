@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SignInButton, SignUpButton, UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 const navLinks = [
   { name: "About", href: "#" },
@@ -80,12 +81,24 @@ export default function Home() {
           ))}
         </nav>
         <div className="flex gap-3">
-          <Link href="/login">
-            <button className="px-5 py-2 rounded-lg font-semibold text-[#254d32] border border-[#254d32] bg-white bg-opacity-80 hover:bg-[#eaf3ec] transition">Login</button>
-          </Link>
-          <Link href="/signup">
-            <button className="px-5 py-2 rounded-lg font-semibold text-white bg-gradient-to-br from-[#4e9a6e] to-[#254d32] shadow hover:from-[#37624e] hover:to-[#254d32] transition">Sign Up</button>
-          </Link>
+          <SignedOut>
+            <SignInButton mode="modal">
+              <button className="px-5 py-2 rounded-lg font-semibold text-[#254d32] border border-[#254d32] bg-white bg-opacity-80 hover:bg-[#eaf3ec] transition">Login</button>
+            </SignInButton>
+            <SignUpButton mode="modal">
+              <button className="px-5 py-2 rounded-lg font-semibold text-white bg-gradient-to-br from-[#4e9a6e] to-[#254d32] shadow hover:from-[#37624e] hover:to-[#254d32] transition">Sign Up</button>
+            </SignUpButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton 
+              appearance={{
+                elements: {
+                  userButtonBox: "w-10 h-10",
+                  userButtonTrigger: "rounded-lg",
+                }
+              }}
+            />
+          </SignedIn>
         </div>
       </header>
 

@@ -58,8 +58,6 @@ export default function Home() {
       <div className="absolute top-[40%] left-[-120px] w-[200px] h-[200px] bg-[#eaf3ec] bg-opacity-60 rounded-2xl blur-2xl z-0" />
       <div className="absolute bottom-[20%] right-[-120px] w-[180px] h-[180px] bg-[#eaf3ec] bg-opacity-60 rounded-2xl blur-2xl z-0" />
 
-
-
       {/* Main Content */}
       <main className="relative z-10 flex flex-col items-center flex-1 px-4 text-center justify-center pt-8 pb-20">
         {/* Headline */}
@@ -125,33 +123,6 @@ export default function Home() {
           </Link>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="relative z-10 w-full py-12 border-t border-[#254d32]/10 mt-auto">
-        <div className="max-w-6xl mx-auto px-12">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-[#254d32] mb-6 md:mb-0">
-              <div className="flex items-center gap-3 mb-3">
-                <div className="bg-gradient-to-br from-[#4e9a6e] to-[#254d32] rounded-xl w-10 h-10 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l2.09 6.26L20 9.27l-5 3.64L16.18 20 12 16.77 7.82 20 9 12.91l-5-3.64 5.91-.91z" />
-                  </svg>
-                </div>
-                <span className="text-xl font-extrabold tracking-tight">Partner<span className="text-[#7bbf8e]">+</span></span>
-              </div>
-              <div className="text-sm opacity-70">Made for college students, by college students.</div>
-            </div>
-            <div className="flex gap-8 text-sm">
-              <Link href="#" className="text-[#254d32] hover:text-[#37624e] transition-colors font-medium">About</Link>
-              <Link href="#" className="text-[#254d32] hover:text-[#37624e] transition-colors font-medium">Privacy</Link>
-              <Link href="#" className="text-[#254d32] hover:text-[#37624e] transition-colors font-medium">Contact</Link>
-            </div>
-          </div>
-          <div className="text-center text-[#254d32] opacity-70 text-sm mt-8 pt-8 border-t border-[#254d32]/10">
-            © 2024 Partner+. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
